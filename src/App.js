@@ -1,53 +1,62 @@
-import { Container, Div, GlobalStyles, Header, Span } from "./style-components";
-import { lightTheme } from "./style-components/GlobalStyles";
+import {
+  Container,
+  Content,
+  GlobalStyles,
+  Header,
+  Span,
+  Navbar,
+  Ul,
+  Li,
+  Links,
+  Div,
+} from "./style-components";
+
+import { theme } from "./theme-context/themeSetup";
+
 import Theme from "./theme-context/theme";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { routes } from "./style-components/Routes";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { routes } from "./Routes";
 
 function App() {
   return (
-    <Theme theme={lightTheme}>
-      <GlobalStyles mode="light" />
-      <Header>
-        <Span>Hello</Span>
+    <Theme theme={theme}>
+      <GlobalStyles />
+
+      <Header secondary>
+        <Span padding="small">Hello</Span>
       </Header>
       <Container>
         <Router>
-          <Div width="20rem">
-            <div
-              style={{
-                padding: "10px",
+          <Navbar>
+            <h2>Components</h2>
+            <Ul>
+              <Li>
+                <Links to="/alert">Alert</Links>
+              </Li>
+              <Li>
+                <Links to="/button">Button</Links>
+              </Li>
+              <Li>
+                <Links to="/shoelaces">Badges</Links>
+              </Li>
+            </Ul>
+          </Navbar>
 
-                background: "#f0f0f0",
-              }}
-            >
-              <ul style={{ listStyleType: "none", padding: 0 }}>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/bubblegum">Bubblegum</Link>
-                </li>
-                <li>
-                  <Link to="/shoelaces">Shoelaces</Link>
-                </li>
-              </ul>
-            </div>
-          </Div>
-
-          <Div body>
-            <Switch>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  children={<route.main />}
-                />
-              ))}
-            </Switch>
-          </Div>
+          <Content bgcolor>
+            <Div pl="2rem">
+              <Switch>
+                {routes.map((route, index) => (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    children={<route.main />}
+                  />
+                ))}
+              </Switch>
+            </Div>
+          </Content>
         </Router>
       </Container>
     </Theme>
