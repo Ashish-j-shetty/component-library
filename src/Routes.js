@@ -1,5 +1,6 @@
-import { AlertComponent } from "./components";
+import { AlertComponent, BadgeComponent } from "./components";
 import { ButtonComponent } from "./components/ButtonComponent";
+import { CardComponent } from "./components/CardComponent";
 
 export const routes = [
   {
@@ -16,6 +17,11 @@ export const routes = [
   {
     path: "/Badges",
 
-    main: () => <h2>Shoelaces</h2>,
+    main: () => <BadgeComponent />,
+  },
+  {
+    path: "/Cards",
+
+    main: () => <CardComponent />,
   },
 ];

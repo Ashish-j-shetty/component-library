@@ -38,7 +38,10 @@ function App() {
                 <Links to="/button">Button</Links>
               </Li>
               <Li>
-                <Links to="/shoelaces">Badges</Links>
+                <Links to="/badges">Badges</Links>
+              </Li>
+              <Li>
+                <Links to="/cards">Card</Links>
               </Li>
             </Ul>
           </Navbar>

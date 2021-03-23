@@ -6,3 +6,9 @@ export { Navbar } from "./Navbar";
 export { Ul, Li, Links } from "./List";
 export { Alert } from "./Alert";
 export { Button, GradientButton } from "./Button";
+
+export { HeartButton, CartButton } from "./Badge";
+
+export { Card } from "./Card";
+
+export { P } from "./Paragraph";
