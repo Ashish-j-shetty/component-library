@@ -15,9 +15,7 @@ export function CardComponent() {
         <CardImg src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/pXNg7ZykRENs8yjJBvkPNCaz" />
         <CardTitle>demo herer</CardTitle>
 
-        <CardDescription>
-          this is my first card toe check the bull shitt what the world
-        </CardDescription>
+        <CardDescription>Custom card description.</CardDescription>
         <CardPricing>
           <P bold>₹ 769</P>
           <P stricked>heoolo2</P>
