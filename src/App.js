@@ -24,7 +24,9 @@ function App() {
       <GlobalStyles />
 
       <Header secondary>
-        <Span padding="small">Hello</Span>
+        <Span fontSize="1.5rem" color="white" padding="small">
+          Custom UI
+        </Span>
       </Header>
       <Container>
         <Router>

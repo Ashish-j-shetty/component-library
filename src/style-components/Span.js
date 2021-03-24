@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Span = styled.span`
   margin: 0.2rem;
+  color: ${({ color }) => color && color};
+  font-size: ${({ fontSize }) => fontSize && fontSize};
 `;
 
 export const BadgeSpan = styled.span`
@@ -32,3 +34,7 @@ export const BadgeSpan = styled.span`
   background-image: ${(props) => props.theme.gradientButton.red.backgroundImg};
   border-radius: 50%;
 `;
+
+Span.defaultProps = {
+  color: "black",
+};

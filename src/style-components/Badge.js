@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Cart3 } from "@styled-icons/bootstrap/Cart3";
 import { BadgeSpan } from "./Span";
 import { Heart } from "@styled-icons/bootstrap/Heart";
+import { HeartFill } from "@styled-icons/bootstrap/HeartFill";
 
 const CartIcon = styled(Cart3)`
   &:focus {
@@ -10,7 +11,8 @@ const CartIcon = styled(Cart3)`
   }
 `;
 
-const HeartIcon = styled(Heart)`
+const HeartIcon = styled(HeartFill)`
+  fill:${({ fill }) => fill && fill}
   &:focus {
     outline: none;
   }
@@ -46,3 +48,7 @@ export function HeartButton({ mt, children }) {
     </Badge>
   );
 }
+
+HeartIcon.defaultProps = {
+  fill: "orange",
+};

@@ -8,6 +8,7 @@ export const Content = styled.div`
 
 export const Div = styled.div`
   padding-left: ${({ pl }) => pl};
+
   width: ${(props) => props.width && props.width};
 `;
 
