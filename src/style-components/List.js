@@ -4,12 +4,10 @@ export const Ul = styled.ul`
   list-style: none;
 `;
 
-export const Li = styled.li``;
+export const Li = styled.li`
+  margin-top: 0.5rem;
+`;
 
 export const a = styled.a``;
 
-export const Links = styled(Link)`
-  a {
-    text-decoration: none;
-  }
-`;
+export const Links = styled(Link)``;
